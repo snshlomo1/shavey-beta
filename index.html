@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=543457a3-18c7-4b88-9357-9aea8c78a9c7
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=543457a3-18c7-4b88-9357-9aea8c78a9c7
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=543457a3-18c7-4b88-9357-9aea8c78a9c7
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=85cf81f9-8a23-4b33-89c0-3dd4c5b20023
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=85cf81f9-8a23-4b33-89c0-3dd4c5b20023
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=85cf81f9-8a23-4b33-89c0-3dd4c5b20023
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=85cf81f9-8a23-4b33-89c0-3dd4c5b20023
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=85cf81f9-8a23-4b33-89c0-3dd4c5b20023
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=85cf81f9-8a23-4b33-89c0-3dd4c5b20023
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>מגרשים שלב ב׳ – שבי דרום (בטא)</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#f1f5f9;color:#1e293b}
+header{background:#fff;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:20}
+.wrap{max-width:1200px;margin:0 auto;padding:12px 16px}
+.top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+h1{margin:0;font-size:20px;font-weight:800}
+.sub{margin:2px 0 0;font-size:12px;color:#64748b}
+.seg{display:flex;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:12px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;padding:7px 14px;border-radius:9px;font-size:13px;font-weight:600;color:#475569;cursor:pointer;font-family:inherit}
+.seg button.on{background:#fff;color:#4338ca;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.seg button.on.g{background:#059669;color:#fff}
+.seg button.on.i{background:#4f46e5;color:#fff}
+main{max-width:1200px;margin:0 auto;padding:14px 16px 40px;display:flex;flex-direction:column;gap:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:12px 14px}
+.stat b{display:block;font-size:24px;font-weight:800;margin-top:2px}
+.stat span{font-size:12px;color:#64748b;font-weight:600}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.bar input[type=search],.bar select{padding:12px 12px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;font-family:inherit;background:#f8fafc}
+.bar input[type=search]{flex:1;min-width:200px}
+.notice{border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600}
+.notice.warn{background:#fffbeb;border:1px solid #fde68a;color:#92400e}
+.notice.err{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c}
+.maphead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid #e2e8f0;background:#f8fafc;font-size:13px;border-radius:16px 16px 0 0}
+.lg{display:flex;gap:16px;align-items:center}
+.lg i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-left:5px}
+.zoom{display:flex;gap:6px;align-items:center}
+.zoom button{width:30px;height:30px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;font-size:16px;cursor:pointer}
+.mapbox{overflow:auto;max-height:72vh;background:#f4f7fa;border-radius:0 0 16px 16px}
+.mapin{margin:0 auto;padding:8px;min-width:900px;transition:width .2s}
+svg{display:block;width:100%;height:auto;user-select:none}
+.plot{cursor:pointer}
+.plot:focus{outline:none}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.item{display:flex;align-items:center;gap:12px;cursor:pointer;border:1px solid #d1fae5}
+.item.occ{border-color:#c7d2fe}
+.item:hover{box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.badge{width:54px;height:54px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;flex:none;background:#ecfdf5;color:#047857;border:1px solid #a7f3d0}
+.item.occ .badge{background:#4f46e5;color:#fff;border-color:#4338ca}
+.badge small{font-size:10px;font-weight:500;opacity:.8}
+.item h3{margin:0;font-size:15px}
+.item p{margin:2px 0 0;font-size:12px;color:#64748b}
+.act{margin-right:auto;font-size:12px;font-weight:700;padding:6px 12px;border-radius:9px;background:#059669;color:#fff;flex:none}
+.item.occ .act{background:#f1f5f9;color:#475569}
+.empty{text-align:center;padding:32px;color:#64748b}
+.modalbg{position:fixed;inset:0;background:rgba(15,23,42,.6);display:flex;align-items:center;justify-content:center;padding:12px;z-index:50}
+.modal{background:#fff;border-radius:22px;width:100%;max-width:430px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.mh{padding:14px 20px;color:#fff;display:flex;justify-content:space-between;align-items:flex-start;background:linear-gradient(to left,#059669,#0d9488)}
+.mh.occ{background:linear-gradient(to left,#4f46e5,#2563eb)}
+.mh h2{margin:4px 0 0;font-size:17px}
+.mh .tag{font-size:12px;opacity:.9}
+.mh button{border:0;background:rgba(255,255,255,.2);color:#fff;width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer}
+form{padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+label{font-size:13px;font-weight:700;display:block;margin-bottom:4px}
+form input{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;font-family:inherit}
+form input:focus{outline:2px solid #6366f1;border-color:#6366f1}
+.btn{border:0;border-radius:12px;padding:12px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn.p{background:#4f46e5;color:#fff}
+.btn.p:disabled{opacity:.5;cursor:not-allowed}
+.btn.d{background:transparent;color:#dc2626;font-size:13px}
+.confirm{background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:10px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#991b1b}
+.confirm button{border:0;border-radius:8px;padding:6px 12px;font-weight:700;cursor:pointer;font-family:inherit}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0f172a;color:#fff;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;z-index:80}
+.hide{display:none!important}
+@media(max-width:700px){
+body{-webkit-text-size-adjust:100%}
+.wrap{padding:10px 12px}h1{font-size:17px}.sub{display:none}
+#viewseg{width:100%}#viewseg button{flex:1;padding:10px 6px;font-size:14px}
+main{padding:10px 10px 30px;gap:10px}
+.stats{gap:6px}.stat{padding:8px 10px}.stat b{font-size:20px}.stat span{font-size:11px}
+.bar{gap:8px}.bar .seg{width:100%}.bar .seg button{flex:1;padding:10px 4px;font-size:14px}.bar select{width:100%}
+.list{grid-template-columns:1fr;gap:8px}
+.item{padding:12px}.badge{width:58px;height:58px}.item h3{font-size:16px}.item p{font-size:13px}
+.act{padding:10px 16px;font-size:14px}
+.mapin{min-width:1000px}.mapbox{max-height:68vh;-webkit-overflow-scrolling:touch}
+.maphead{padding:8px 10px}.zoom button{width:38px;height:38px}
+.modalbg{align-items:flex-end;padding:0}
+.modal{max-width:none;border-radius:22px 22px 0 0;max-height:92vh;overflow:auto;padding-bottom:env(safe-area-inset-bottom)}
+.btn{padding:14px}.confirm button{padding:10px 14px}
+.toast{bottom:80px;max-width:92vw;text-align:center}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap top">
+  <div><h1>🏡 מגרשים שלב ב׳ – שבי דרום</h1><p class="sub">לחצו על מגרש כדי לשבץ את שם המשפחה שלכם</p></div>
+  <div class="seg" id="viewseg"><button class="on" data-v="map">מפה</button><button data-v="list">רשימה</button><button data-v="recent" style="display:none">עדכונים</button><button data-v="fam" style="display:none">משפחות</button></div>
+</div></header>
+<main>
+  <div id="notice"></div>
+  <section class="stats">
+    <div class="card stat"><span>סה״כ מגרשים</span><b id="sTotal">–</b></div>
+    <div class="card stat"><span style="color:#4f46e5">משובצים</span><b id="sOcc" style="color:#4338ca">–</b></div>
+    <div class="card stat"><span style="color:#059669">פנויים</span><b id="sFree" style="color:#047857">–</b></div>
+  </section>
+  <section class="card bar">
+    <input type="search" id="q" placeholder="חיפוש לפי מספר מגרש או שם משפחה...">
+    <div class="seg" id="stseg"><button class="on" data-s="all">הכל</button><button data-s="free" class="g">פנויים</button><button data-s="occ" class="i">משובצים</button></div>
+    <select id="zsel" class="hide"></select>
+  </section>
+  <section id="mapSec" class="card" style="padding:0">
+    <div class="maphead">
+      <div class="lg"><span><i style="background:#fff;border:2px solid #10b981"></i>פנוי</span><span><i style="background:#4f46e5"></i>משובץ</span></div>
+      <div class="zoom"><button id="zo">−</button><span id="zv" style="width:44px;text-align:center;font-weight:700">100%</span><button id="zi">+</button></div>
+    </div>
+    <div class="mapbox"><div class="mapin" id="mapin"><svg id="svg" viewBox="0 70 1240 645" role="img" aria-label="מפת מגרשים"></svg></div></div>
+  </section>
+  <section id="listSec" class="list hide"></section>
+</main>
+<div id="modalHost"></div>
+<div id="toast" class="toast hide"></div>
+
+<script>
+const Z=['צפון (שורה עליונה)','מרכז-צפון (702-692)','מרכז (769-780)','שדרת 731-743','שדרת 721-712','דרום-מזרח (749-744)','חצי-גורן (מעגל חיצוני)','חצי-גורן (קשת דרומית)','חצי-גורן (מעגל פנימי)'];
+const RAW=[
+
+['702',1,'',545,142,46,66,0],['701-2',1,'',594,142,46,66,0],['700',1,'',643,142,46,66,0],['699',1,'',692,142,46,66,0],['698',1,'',741,142,46,66,0],['697',1,'',854,142,46,66,0],['696',1,'',903,142,46,66,0],['695',1,'',952,142,46,66,0],['694',1,'',1001,142,46,66,0],['693',1,'',1065,142,46,66,0],['692',1,'',1114,142,46,66,0],
+['769',2,'',492,235,44,66,-4],['770',2,'',545,235,46,66,0],['771',2,'',594,235,46,66,0],['772',2,'',643,235,46,66,0],['773',2,'',692,235,46,66,0],['774',2,'',741,235,46,66,0],['775',2,'',854,235,46,66,0],['776',2,'',903,235,46,66,0],['777',2,'',952,235,46,66,0],['778',2,'פרץ',1001,235,46,66,0],['779',2,'אדיר',1065,235,46,66,0],['780',2,'דנן',1114,235,46,66,0],
+['731',3,'',495,345,46,66,0],['732',3,'',545,345,46,66,0],['733',3,'',594,345,46,66,0],['734',3,'',643,345,46,66,0],['735',3,'',692,345,46,66,0],['736',3,'',741,345,46,66,0],['737',3,'זכריה',805,345,46,66,0],['738',3,'',854,345,46,66,0],['739',3,'שפייר',903,345,46,66,0],['740',3,'אחיטוב',952,345,46,66,0],['741',3,'',1001,345,46,66,0],['742',3,'',1065,345,46,66,0],['743',3,'',1114,345,46,66,0],
+['721',4,'אמסלם',545,442,46,66,0],['720',4,'',594,442,46,66,0],['719',4,'פתיחי',643,442,46,66,0],['718',4,'בן דוד',692,442,46,66,0],['717',4,'פסטרנק',741,442,46,66,0],['716',4,'',805,442,46,66,0],['715',4,'',854,442,46,66,0],['714',4,'',903,442,46,66,0],['713',4,'',952,442,46,66,0],['712',4,'',1001,442,46,66,0],
+['749',5,'',854,558,46,66,0],['748',5,'',903,558,46,66,0],['747',5,'',952,558,46,66,0],['746',5,'',1001,558,46,66,0],['745',5,'',1050,558,46,66,0],['744',5,'',1099,558,46,66,0],
+['763',6,'נוימן',205,162,48,64,-38],['764',6,'שרפי',256,138,48,64,-16],['765',6,'',310,135,48,64,4],['766',6,'',363,148,48,64,22],['767',6,'',408,185,46,64,26],['768',6,'',446,215,46,64,16],
+['762',6,'',158,205,48,62,-52],['761',6,'',122,254,48,62,-66],['760',6,'',102,306,48,62,-78],['759',6,'אדרי',96,360,48,62,-88],['758',6,'חדד',102,414,48,62,-98],['757',6,'אזולאי',118,468,48,62,-112],
+['756',7,'כהן אריאל',158,540,48,66,44],['755',7,'סגרון',206,575,48,66,30],['754',7,"פרלוביץ'",256,598,48,66,18],['753',7,'טויטו',308,610,48,66,8],['752',7,'כהן (יוסף ומוריה)',360,612,50,66,-2],['751',7,'גונן',413,606,48,66,-10],['750',7,'תפוחי',465,595,48,66,-16],
+['728',8,'גולדשטיין',328,280,48,66,22],['729',8,'',382,304,48,66,16],['730',8,'',435,318,48,66,8],['727',8,'',245,422,46,64,34],['726',8,'',294,448,46,64,20],['725',8,'',344,460,46,64,8],['724',8,'',394,462,46,64,0],['723',8,'',444,456,46,64,-8],['722',8,'',493,445,46,64,-12]
+];
+const BASE=RAW.map(a=>({id:a[0],zone:Z[a[1]],fam:a[2],x:a[3],y:a[4],w:a[5],h:a[6],r:a[7]}));
+
+const S={admin:false,bt:null,famEdit:false,remote:{},loaded:false,db:null,uid:null,view:(window.matchMedia&&matchMedia('(max-width:700px)').matches)?'list':'map',status:'all',zone:'all',q:'',zoom:1,sel:null,confirm:false,saving:false};
+const $=id=>document.getElementById(id);
+const NS='http://www.w3.org/2000/svg';
+function el(tag,attrs,text){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;return e}
+function toast(m){const t=$('toast');t.textContent=m;t.classList.remove('hide');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.add('hide'),3000)}
+
+const SOLD=id=>{const n=parseInt(id,10);return(n>=692&&n<=702)||(n>=712&&n<=716)||(n>=744&&n<=749)};
+function merged(){
+  return BASE.map(b=>{
+    const r=S.remote[b.id];
+    const bt=(S.bt&&S.bt.taken&&S.bt.taken[b.id])||null;const name=bt?bt.name:((r!==undefined?r.familyName:b.fam)||'').trim();
+    return {...b,name,phone:bt?bt.phone:((r&&r.phone)||'').trim(),note:bt?bt.note:((r&&r.note)||'').trim(),occ:name.length>0,sold:SOLD(b.id),mine:!!(r&&r.mine),bmine:!!(S.bt&&S.bt.me&&S.bt.me.plot===b.id),byDevice:!!(r&&r.byDevice),updatedAt:(r&&r.updatedAt)||0};
+  });
+}
+function filtered(all){
+  const q=S.q.trim().toLowerCase();
+  return all.filter(p=>{
+    if(p.sold&&(!p.occ||S.status==='free'))return false;
+    const mq=!q||p.id.toLowerCase().includes(q)||p.name.toLowerCase().includes(q)||p.note.toLowerCase().includes(q);
+    const ms=S.status==='all'||(S.status==='occ'&&p.occ)||(S.status==='free'&&!p.occ);
+    const mz=S.zone==='all'||p.zone===S.zone;
+    return mq&&ms&&mz;
+  });
+}
+function short(n){return n.length<=10?n:n.slice(0,9)+'..'}
+
+function renderMap(all,hit){
+  const svg=$('svg');svg.textContent='';
+  svg.appendChild(el('rect',{x:0,y:0,width:1240,height:715,rx:20,fill:'#f8fafc'}));
+  const road=el('g',{stroke:'#cbd5e1','stroke-width':26,fill:'none','stroke-linecap':'round',opacity:.65});
+  ['M 520 120 L 1185 120','M 495 322 L 1185 322','M 495 530 L 1165 530','M 1185 120 L 1185 530','M 520 120 C 310 60, 155 180, 165 375 C 175 530, 320 585, 515 545','M 495 322 C 420 230, 260 220, 225 355 C 200 455, 310 515, 495 495'].forEach(d=>road.appendChild(el('path',{d})));
+  svg.appendChild(road);
+  const green=el('g',{opacity:.9});
+  green.appendChild(el('rect',{x:794,y:145,width:52,height:152,rx:8,fill:'#dcfce7',stroke:'#86efac'}));
+  green.appendChild(el('text',{x:820,y:218,'text-anchor':'middle',fill:'#15803d','font-size':11,'font-weight':700},'שצ״פ'));
+  green.appendChild(el('text',{x:820,y:233,'text-anchor':'middle',fill:'#16a34a','font-size':10},'555'));
+  green.appendChild(el('ellipse',{cx:320,cy:395,rx:68,ry:26,fill:'#dcfce7',stroke:'#86efac'}));
+  green.appendChild(el('text',{x:320,y:399,'text-anchor':'middle',fill:'#15803d','font-size':11,'font-weight':700},'שצ״פ 556'));
+  green.appendChild(el('rect',{x:1055,y:445,width:95,height:60,rx:10,fill:'#dcfce7',stroke:'#86efac'}));
+  green.appendChild(el('text',{x:1102,y:479,'text-anchor':'middle',fill:'#15803d','font-size':11,'font-weight':700},'שצ״פ 565'));
+  svg.appendChild(green);
+  svg.appendChild(el('text',{x:275,y:95,'text-anchor':'middle',fill:'#64748b','font-size':12,'font-weight':700},'מתחם חצי-גורן'));
+  all.forEach(p=>{
+    const cx=p.x+p.w/2,cy=p.y+p.h/2,dim=hit&&!hit.has(p.id),sel=S.sel===p.id;
+    if(p.sold){const sg=el('g',{transform:'rotate('+p.r+' '+cx+' '+cy+')','aria-label':'מגרש '+p.id+(p.occ?' – '+p.name:'')});sg.style.opacity=dim?.25:.85;sg.appendChild(el('rect',{x:p.x,y:p.y,width:p.w,height:p.h,rx:6,fill:'#e2e8f0',stroke:'#94a3b8','stroke-width':1.5}));sg.appendChild(el('text',{x:cx,y:p.y+15,'text-anchor':'middle',fill:'#64748b','font-size':p.id.length>3?9.5:11,'font-weight':800},p.id));if(p.occ)sg.appendChild(el('text',{x:cx,y:p.y+39,'text-anchor':'middle',fill:'#334155','font-size':p.name.length>8?9.2:10.8,'font-weight':700},short(p.name)));sg.style.cursor='pointer';sg.addEventListener('click',()=>openPlot(p.id));svg.appendChild(sg);return}
+    const g=el('g',{class:'plot',transform:'rotate('+p.r+' '+cx+' '+cy+')',tabindex:0,role:'button','aria-label':'מגרש '+p.id+(p.occ?' – '+p.name:' – פנוי')});
+    g.style.opacity=dim?.25:1;
+    g.addEventListener('click',()=>openPlot(p.id));
+    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPlot(p.id)}});
+    g.appendChild(el('rect',{x:p.x,y:p.y,width:p.w,height:p.h,rx:6,fill:p.occ?'#4f46e5':'#fff',stroke:sel?'#f59e0b':p.occ?'#3730a3':'#10b981','stroke-width':sel?3.5:2}));
+    if(!p.occ)g.appendChild(el('rect',{x:p.x+2,y:p.y+2,width:p.w-4,height:16,rx:4,fill:'#ecfdf5'}));
+    g.appendChild(el('text',{x:cx,y:p.y+15,'text-anchor':'middle',fill:p.occ?'#c7d2fe':'#047857','font-size':p.id.length>3?9.5:11,'font-weight':800},p.id));
+    if(p.occ){
+      g.appendChild(el('text',{x:cx,y:p.y+39,'text-anchor':'middle',fill:'#fff','font-size':p.name.length>8?9.2:10.8,'font-weight':700},short(p.name)));
+      if(p.phone||p.note)g.appendChild(el('circle',{cx:cx,cy:p.y+54,r:3,fill:'#fbbf24'}));
+    }else g.appendChild(el('text',{x:cx,y:p.y+43,'text-anchor':'middle',fill:'#10b981','font-size':10,'font-weight':600},'פנוי'));
+    svg.appendChild(g);
+  });
+}
+function renderList(items){
+  const host=$('listSec');host.textContent='';
+  if(!items.length){const d=document.createElement('div');d.className='card empty';d.textContent='לא נמצאו מגרשים התואמים לחיפוש.';host.appendChild(d);return}
+  items.forEach(p=>{
+    const d=document.createElement('div');d.className='card item'+(p.occ?' occ':'');
+    d.tabIndex=0;d.onclick=()=>openPlot(p.id);d.onkeydown=e=>{if(e.key==='Enter')openPlot(p.id)};
+    const b=document.createElement('div');b.className='badge';
+    const s1=document.createElement('small');s1.textContent='מגרש';const s2=document.createElement('span');s2.textContent=p.id;b.append(s1,s2);
+    const m=document.createElement('div');
+    const h=document.createElement('h3');h.textContent=p.occ?'משפחת '+p.name:'מגרש פנוי';
+    const z=document.createElement('p');z.textContent=p.zone+(p.note?' • '+p.note:'')+(p.phone?' • '+p.phone:'')+(S.admin&&p.updatedAt?' • עודכן '+fmtT(p.updatedAt):'');
+    m.append(h,z);
+    const a=document.createElement('span');a.className='act';a.textContent=p.occ?'פרטים':'שבץ';
+    d.append(b,m,a);host.appendChild(d);
+  });
+}
+function render(){
+  const all=merged(),items=filtered(all);
+  document.querySelectorAll('main .stats, main .card.bar').forEach(e=>e.classList.toggle('hide',S.view==='fam'));
+  const act=all.filter(p=>!p.sold),occ=act.filter(p=>p.occ).length;
+  $('sTotal').textContent=act.length;$('sOcc').textContent=occ;$('sFree').textContent=act.length-occ;
+  const filt=S.q.trim()||S.status!=='all'||S.zone!=='all';
+  $('mapSec').classList.toggle('hide',S.view!=='map');
+  $('listSec').classList.toggle('hide',S.view!=='list'&&S.view!=='recent'&&S.view!=='fam');
+  $('zsel').classList.toggle('hide',S.view!=='list');
+  if(S.view==='map')renderMap(all,filt?new Set(items.map(p=>p.id)):null);else if(S.view==='fam')renderFam();else renderList(S.view==='recent'?all.filter(p=>p.updatedAt).sort((a,b)=>b.updatedAt-a.updatedAt):items);
+  $('mapin').style.width=(100*S.zoom)+'%';$('zv').textContent=Math.round(S.zoom*100)+'%';
+  renderNotice();
+}
+function renderNotice(){
+  const n=$('notice');n.textContent='';
+  let msg=null,cls='warn';
+  if(S.err){msg=S.err;cls='err'}
+  else if(!S.loaded){msg='טוען שיבוצים...'}
+  else if(S.admin){const st=S.stats;msg='מצב מנהל – אפשר לערוך ולפנות כל מגרש'+(st?' • מבקרים: '+st.visitors+' ('+st.visits+' כניסות) • היום: '+st.today+(st.last?' • כניסה אחרונה: '+fmtT(st.last):'')+' • בחרו מגרש: '+st.chosen:'')}
+  if(!msg&&!S.admin&&S.bt){const me=S.bt.me;if(S.bt.badCode)msg='הקישור לא תקין – פנו למארגן';else if(!FCODE)msg='צפייה בלבד – לבחירת מגרש היכנסו דרך הקישור האישי שקיבלתם';else if(S.bt.total===0)msg='הבחירה טרם נפתחה';else if(me){if(me.plot)msg='משפחת '+me.name+' – בחרתם מגרש '+me.plot;else if(me.turn)msg='משפחת '+me.name+' – תורכם! לחצו על מגרש פנוי כדי לבחור (בחירה אחת)';else msg='משפחת '+me.name+' – אתם מספר '+me.order+' מתוך '+S.bt.total+'. עכשיו תור משפחת '+(S.bt.current||'')+'.'}}
+  if(S.admin&&S.bt&&msg&&msg.indexOf('מצב מנהל')===0)msg+=' • נבחרו '+S.bt.done+' מתוך '+S.bt.total;
+  if(msg){const d=document.createElement('div');d.className='notice '+cls;d.textContent=msg;n.appendChild(d)}
+}
+
+function openPlot(id){S.sel=id;S.confirm=false;renderModal();render()}
+function closeModal(){S.sel=null;renderModal();render()}
+function renderModal(){if(S.admin){renderModalLegacy();return}betaModal()}
+function renderModalLegacy(){
+  const host=$('modalHost');host.textContent='';
+  if(!S.sel)return;
+  const p=merged().find(x=>x.id===S.sel);if(!p)return;
+  const bg=document.createElement('div');bg.className='modalbg';bg.onclick=closeModal;
+  const m=document.createElement('div');m.className='modal';m.onclick=e=>e.stopPropagation();
+  const mh=document.createElement('div');mh.className='mh'+(p.occ?' occ':'');
+  const t=document.createElement('div');
+  const tag=document.createElement('div');tag.className='tag';tag.textContent='מגרש '+p.id+' • '+p.zone;
+  const h2=document.createElement('h2');h2.textContent=p.occ?'משפחת '+p.name:'שיבוץ משפחה למגרש';
+  t.append(tag,h2);
+  const x=document.createElement('button');x.type='button';x.textContent='✕';x.setAttribute('aria-label','סגור');x.onclick=closeModal;
+  mh.append(t,x);
+  const myPlot=merged().find(q=>q.mine&&q.occ);
+  const ro=!S.admin&&(p.sold||(p.occ&&!p.mine)||(!p.occ&&myPlot&&myPlot.id!==p.id));
+  if(ro){const bd=document.createElement('div');bd.style.cssText='padding:16px;line-height:1.9';
+    const L=[];if(p.occ){L.push('משפחת '+p.name);if(p.phone)L.push('טלפון: '+p.phone);if(p.note)L.push(p.note)}else if(p.sold){L.push('מגרש לא זמין')}else L.push('כבר בחרתם מגרש '+myPlot.id+' ('+myPlot.name+'). אפשר לבחור רק מגרש אחד.');
+    L.forEach(s=>{const d=document.createElement('div');d.textContent=s;bd.appendChild(d)});m.append(mh,bd);bg.appendChild(m);host.appendChild(bg);return}
+  const f=document.createElement('form');
+  function field(lbl,val,ph,type,dir){
+    const w=document.createElement('div');const l=document.createElement('label');l.textContent=lbl;
+    const i=document.createElement('input');i.type=type||'text';i.value=val;i.placeholder=ph;if(dir)i.dir=dir;
+    w.append(l,i);f.appendChild(w);return i;
+  }
+  const iN=field('שם משפחה (ושמות פרטיים) *',p.name,'לדוגמה: כהן (יוסף ומוריה)');iN.required=true;iN.maxLength=40;
+  const iP=field('טלפון (אופציונלי)',p.phone,'050-0000000','tel','ltr');iP.maxLength=20;
+  const iO=field('הערה לשכנים (אופציונלי)',p.note,'למשל: נשמח להכיר שכנים צמודים');iO.maxLength=80;
+  const save=document.createElement('button');save.className='btn p';save.type='submit';save.textContent='שמור שיבוץ';save.disabled=S.saving;
+  f.appendChild(save);
+  f.onsubmit=async e=>{
+    e.preventDefault();
+    const name=iN.value.trim();if(!name)return;
+    S.saving=true;save.disabled=true;
+    try{
+      await saveDoc(p.id,{familyName:name,phone:iP.value.trim(),note:iO.value.trim()},p.name);
+      toast('מגרש '+p.id+' שובץ למשפחת '+name);S.sel=null;
+    }catch(err){toast(errMsg(err));await refresh()}
+    S.saving=false;renderModal();render();
+  };
+  if(p.occ){
+    const box=document.createElement('div');
+    if(!S.confirm){
+      const d=document.createElement('button');d.type='button';d.className='btn d';d.textContent='פנה מגרש זה (סמן כפנוי)';
+      d.onclick=()=>{S.confirm=true;renderModal()};box.appendChild(d);
+    }else{
+      const c=document.createElement('div');c.className='confirm';
+      const sp=document.createElement('span');sp.textContent='לפנות את מגרש '+p.id+'?';
+      const bs=document.createElement('div');bs.style.display='flex';bs.style.gap='6px';
+      const y=document.createElement('button');y.type='button';y.style.background='#dc2626';y.style.color='#fff';y.textContent='כן, פנה';
+      y.onclick=async()=>{
+        try{await saveDoc(p.id,{familyName:'',phone:'',note:''},p.name);toast('מגרש '+p.id+' פונה');S.sel=null;S.confirm=false}
+        catch(err){toast(errMsg(err))}
+        renderModal();render();
+      };
+      const n=document.createElement('button');n.type='button';n.textContent='ביטול';n.onclick=()=>{S.confirm=false;renderModal()};
+      bs.append(y,n);c.append(sp,bs);box.appendChild(c);
+    }
+    f.appendChild(box);
+  }
+  if(S.admin&&p.updatedAt){const u=document.createElement('div');u.style.cssText='padding:8px 16px 0;font-size:12px;color:#64748b';u.textContent='עודכן: '+fmtT(p.updatedAt)+(p.byDevice?' (על ידי מבקר באתר)':' (על ידי מנהל)');m.append(mh,u,f)}else m.append(mh,f);
+  bg.appendChild(m);host.appendChild(bg);
+  if(!p.occ)setTimeout(()=>iN.focus(),0);
+}
+
+document.querySelectorAll('#viewseg button').forEach(b=>b.onclick=()=>{S.view=b.dataset.v;document.querySelectorAll('#viewseg button').forEach(x=>x.classList.toggle('on',x===b));render()});
+document.querySelectorAll('#stseg button').forEach(b=>b.onclick=()=>{S.status=b.dataset.s;document.querySelectorAll('#stseg button').forEach(x=>x.classList.toggle('on',x===b));render()});
+$('q').oninput=e=>{S.q=e.target.value;render()};
+$('zo').onclick=()=>{S.zoom=Math.max(.8,+(S.zoom-.2).toFixed(1));render()};
+$('zi').onclick=()=>{S.zoom=Math.min(2.2,+(S.zoom+.2).toFixed(1));render()};
+const zs=$('zsel');
+[['all','כל האזורים']].concat(Z.filter(z=>BASE.some(b=>b.zone===z)).map(z=>[z,z])).forEach(([v,t])=>{const o=document.createElement('option');o.value=v;o.textContent=t;zs.appendChild(o)});
+zs.onchange=e=>{S.zone=e.target.value;render()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&S.sel)closeModal()});
+
+const API='https://script.google.com/macros/s/AKfycbyAObktDIeoftdIARvCiv0zCxg3d7ukchBlhbkZBLdSkp-o-MRL2Hb3Ci6eGZGlWtE/exec';
+const FCODE=(()=>{try{const fm=location.search.match(/[?&]f=([a-z0-9]+)/i);if(fm){localStorage.setItem('plotFam',fm[1]);return fm[1]}return localStorage.getItem('plotFam')||''}catch(e){return ''}})();
+const TOK=(()=>{try{let t=localStorage.getItem('plotTok');if(!t){t=[...crypto.getRandomValues(new Uint8Array(16))].map(b=>b.toString(16).padStart(2,'0')).join('');localStorage.setItem('plotTok',t)}return t}catch(e){return 'm'+Math.random().toString(36).slice(2)+Date.now().toString(36)}})();
+let ADM='';try{const am=location.hash.match(/admin=([a-z0-9]+)/i);if(am){ADM=am[1];localStorage.setItem('plotAdm',ADM);history.replaceState(null,'',location.pathname)}else ADM=localStorage.getItem('plotAdm')||''}catch(e){}
+const QS=()=>'&token='+encodeURIComponent(TOK)+(ADM?'&admin='+encodeURIComponent(ADM):'');
+const run=async(fn,...a)=>{if(fn==='getAll'){const r=await fetch(API+'?action=getAll'+QS());if(!r.ok)throw new Error('http');return await r.text()}if(fn==='savePlot'){const r=await fetch(API+'?action=save&id='+encodeURIComponent(a[0])+'&data='+encodeURIComponent(a[1])+'&prev='+encodeURIComponent(a[2])+QS());if(!r.ok)throw new Error('http');return await r.json()}};
+const fmtT=t=>new Date(t).toLocaleString('he-IL',{timeZone:'Asia/Jerusalem',day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'});
+const errMsg=err=>err&&err.reason==='limit'?'כבר בחרתם מגרש '+err.plot+' – אפשר לבחור רק מגרש אחד':err&&err.reason==='locked'?'המגרש כבר תפוס':err&&err.conflict?'המגרש כבר עודכן על ידי מישהו אחר':'השמירה נכשלה, נסו שוב';
+async function saveDoc(id,obj,prev){const r=await run('savePlot',id,JSON.stringify(obj),prev||'');if(!r||!r.ok){const e=new Error('conflict');e.reason=r&&r.reason;e.plot=r&&r.plot;e.conflict=!e.reason||e.reason==='conflict';throw e}await refresh()}
+const bMsg=r=>({turn:'עדיין לא תורכם',already:'כבר בחרתם מגרש',taken:'המגרש כבר נתפס',sold:'מגרש לא זמין',code:'קישור לא תקין',later:'אי אפשר לבטל – המשפחה הבאה כבר בחרה'})[r&&r.reason]||'הפעולה נכשלה';
+const inpCss='width:100%;margin:6px 0;padding:10px;border:1px solid #cbd5e1;border-radius:10px;box-sizing:border-box;font:inherit';
+const smallBtn='border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit';
+async function copyTxt(s,msg){try{await navigator.clipboard.writeText(s)}catch(e){const t=document.createElement('textarea');t.value=s;document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(_){}t.remove()}toast(msg||'הועתק')}
+function maybeWelcome(){
+  if(S.admin||S.welcomeOpen||S.sel||!S.bt||!S.bt.me)return;
+  const me=S.bt.me,st=me.plot?'done':me.turn?'turn':'wait';
+  if(st==='done')return;
+  try{if(sessionStorage.getItem('wl_'+st))return;sessionStorage.setItem('wl_'+st,'1')}catch(e){}
+  S.welcomeOpen=true;
+  const bg=document.createElement('div');bg.className='modalbg';
+  const m=document.createElement('div');m.className='modal';m.onclick=e=>e.stopPropagation();
+  const mh=document.createElement('div');mh.className='mh'+(st==='turn'?' occ':'');
+  const t=document.createElement('div');
+  const h2=document.createElement('h2');h2.textContent=st==='turn'?'משפחת '+me.name+' – תורכם לבחור!':'משפחת '+me.name+' – תורכם עוד לא הגיע';
+  t.appendChild(h2);mh.appendChild(t);
+  const bd=document.createElement('div');bd.style.cssText='padding:16px;line-height:1.8';
+  const ul=document.createElement('ul');ul.style.cssText='margin:0;padding:0 18px 0 0';
+  const L=st==='turn'?[
+    'אפשר לבחור מגרש אחד בלבד: לחצו על מגרש פנוי ואשרו את הבחירה.',
+    'הבחירה סופית. אפשר לבטל אותה רק כל עוד המשפחה הבאה בתור'+(S.bt.fams?'':'')+' עוד לא בחרה.',
+    'מגרשים אפורים ומגרשים שכבר נבחרו אינם זמינים.',
+    'אחרי שתבחרו, התור עובר למשפחה הבאה.'
+  ]:[
+    'אתם מספר '+me.order+' מתוך '+S.bt.total+'. עכשיו תור משפחת '+(S.bt.current||'')+'.',
+    'אפשר לעיין במפה ולראות אילו מגרשים פנויים, אבל בחירה אפשרית רק כשהתור מגיע אליכם.',
+    'כשיגיע תורכם תופיע כאן הודעה, והדף מתעדכן לבד כל כמה שניות.',
+    'כל משפחה בוחרת מגרש אחד בלבד, והבחירה סופית.'
+  ];
+  L.forEach(s=>{const li=document.createElement('li');li.textContent=s;ul.appendChild(li)});
+  const b=document.createElement('button');b.type='button';b.className='btn p';b.style.marginTop='14px';b.textContent=st==='turn'?'הבנתי, מתחילים':'הבנתי';
+  const close=()=>{bg.remove();S.welcomeOpen=false};b.onclick=close;bg.onclick=close;
+  bd.append(ul,b);m.append(mh,bd);bg.appendChild(m);document.body.appendChild(bg);
+}
+async function loadBeta(){try{const r=await (await fetch(API+'?action=b_state&code='+encodeURIComponent(FCODE)+(ADM?'&admin='+encodeURIComponent(ADM):''))).json();if(r&&r.ok){S.bt=r;render();maybeWelcome()}}catch(e){}}
+function betaModal(){
+  const host=$('modalHost');host.textContent='';if(!S.sel)return;
+  const p=merged().find(x=>x.id===S.sel);if(!p)return;
+  const me=S.bt&&S.bt.me;
+  const bg=document.createElement('div');bg.className='modalbg';bg.onclick=closeModal;
+  const m=document.createElement('div');m.className='modal';m.onclick=e=>e.stopPropagation();
+  const mh=document.createElement('div');mh.className='mh'+(p.occ?' occ':'');
+  const t=document.createElement('div');
+  const tag=document.createElement('div');tag.className='tag';tag.textContent='מגרש '+p.id+' • '+p.zone;
+  const h2=document.createElement('h2');h2.textContent=p.occ?'משפחת '+p.name:(p.sold?'מגרש לא זמין':'מגרש פנוי');
+  t.append(tag,h2);
+  const x=document.createElement('button');x.type='button';x.textContent='✕';x.setAttribute('aria-label','סגור');x.onclick=closeModal;
+  mh.append(t,x);
+  const bd=document.createElement('div');bd.style.cssText='padding:16px;line-height:1.9';
+  const add=s=>{const d=document.createElement('div');d.textContent=s;bd.appendChild(d)};
+  if(p.occ){if(p.phone)add('טלפון: '+p.phone);if(p.note)add(p.note)}
+  const canPick=!p.occ&&!p.sold&&me&&me.turn&&!me.plot;
+  if(canPick){
+    add('בחירה במגרש '+p.id+' היא סופית. אפשר לבטל רק כל עוד המשפחה הבאה בתור לא בחרה.');
+    const iP=document.createElement('input');iP.type='tel';iP.dir='ltr';iP.placeholder='טלפון (אופציונלי)';iP.maxLength=20;iP.style.cssText=inpCss;
+    const iO=document.createElement('input');iO.type='text';iO.placeholder='הערה לשכנים (אופציונלי)';iO.maxLength=80;iO.style.cssText=inpCss;
+    const b=document.createElement('button');b.type='button';b.className='btn p';b.textContent='אישור בחירה – מגרש '+p.id;
+    b.onclick=async()=>{b.disabled=true;try{const r=await (await fetch(API+'?action=b_choose&code='+encodeURIComponent(FCODE)+'&id='+encodeURIComponent(p.id)+'&phone='+encodeURIComponent(iP.value.trim())+'&note='+encodeURIComponent(iO.value.trim()))).json();if(r.ok){toast('מגרש '+p.id+' נבחר בהצלחה');S.sel=null}else toast(bMsg(r))}catch(e){toast('הפעולה נכשלה, נסו שוב')}await loadBeta();renderModal();render()};
+    bd.append(iP,iO,b);
+  }else if(!p.occ&&!p.sold){
+    if(!FCODE||!me)add('צפייה בלבד – לבחירת מגרש היכנסו דרך הקישור האישי');
+    else if(me.plot)add('כבר בחרתם מגרש '+me.plot);
+    else add('עדיין לא תורכם. עכשיו תור משפחת '+((S.bt&&S.bt.current)||''));
+  }else if(p.sold&&!p.occ)add('מגרש לא זמין');
+  if(p.bmine&&me&&me.canCancel){const c=document.createElement('button');c.type='button';c.className='btn d';c.textContent='בטל את הבחירה שלי';c.onclick=async()=>{c.disabled=true;try{const r=await (await fetch(API+'?action=b_cancel&code='+encodeURIComponent(FCODE))).json();toast(r.ok?'הבחירה בוטלה':bMsg(r))}catch(e){toast('הפעולה נכשלה')}await loadBeta();S.sel=null;renderModal();render()};bd.appendChild(c)}
+  m.append(mh,bd);bg.appendChild(m);host.appendChild(bg);
+}
+const famList=()=>((S.bt&&S.bt.fams)||[]).map(f=>({code:f.code,name:f.name}));
+async function famSet(list){try{const r=await (await fetch(API+'?action=b_setfam&admin='+encodeURIComponent(ADM)+'&data='+encodeURIComponent(JSON.stringify(list)))).json();if(r.ok){S.bt=r;S.famEdit=false}else toast(r.reason==='chosen'?'אי אפשר למחוק או להזיז משפחה שכבר בחרה':'הפעולה נכשלה')}catch(e){toast('הפעולה נכשלה')}render()}
+function moveFam(dragCode,targetCode,before){
+  const fams=S.bt.fams,list=famList(),slots=[];
+  fams.forEach((f,i)=>{if(!f.plot)slots.push(i)});
+  const U=slots.map(i=>list[i]);
+  const di=U.findIndex(x=>x.code===dragCode);if(di<0)return;
+  const item=U.splice(di,1)[0];
+  let ti=U.findIndex(x=>x.code===targetCode);if(ti<0)return;if(!before)ti++;
+  U.splice(ti,0,item);
+  slots.forEach((s,k)=>{list[s]=U[k]});
+  famSet(list);
+}
+const icoBtn='border:none;background:transparent;border-radius:8px;cursor:pointer;font:inherit;font-size:15px;min-width:30px;height:30px;padding:0 6px;color:#475569';
+function renderFam(){
+  const host=$('listSec');
+  if((S.famEdit||S.dragging)&&host.querySelector('input,textarea'))return;
+  host.textContent='';
+  const bt=S.bt||{},fams=bt.fams||[];
+  const cur=fams.findIndex(x=>!x.plot),done=fams.filter(x=>x.plot).length;
+  const wrap=document.createElement('div');wrap.style.cssText='max-width:560px;margin:0 auto;padding:4px 0 24px';
+  const hdr=document.createElement('div');hdr.style.cssText='display:flex;justify-content:space-between;align-items:baseline;margin:6px 4px 10px';
+  const tt=document.createElement('div');
+  const t1=document.createElement('span');t1.textContent='סדר התור';t1.style.cssText='font-weight:800;font-size:17px';
+  const t2=document.createElement('span');t2.textContent=fams.length?'  ·  נבחרו '+done+' מתוך '+fams.length:'';t2.style.cssText='font-size:13px;color:#64748b';
+  tt.append(t1,t2);
+  const all=document.createElement('button');all.type='button';all.style.cssText=smallBtn+';font-size:13px;padding:5px 10px';all.textContent='העתק את כל הקישורים';
+  all.onclick=()=>copyTxt(fams.map(f=>f.name+': '+location.origin+location.pathname+'?f='+f.code).join('\n'),'כל הקישורים הועתקו');
+  hdr.append(tt);if(fams.length)hdr.append(all);
+  wrap.appendChild(hdr);
+  const bar=document.createElement('div');bar.style.cssText='display:flex;gap:6px;align-items:center;margin:0 0 6px';
+  const ni=document.createElement('input');ni.type='text';ni.placeholder='הוספת משפחה לסוף התור…';ni.maxLength=40;
+  ni.style.cssText='flex:1;padding:8px 10px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;box-sizing:border-box';
+  const nb=document.createElement('button');nb.type='button';nb.style.cssText=smallBtn;nb.textContent='הוסף';
+  const bulk=document.createElement('button');bulk.type='button';bulk.style.cssText=smallBtn;bulk.textContent='רשימה';bulk.title='הדבקת כמה שמות בבת אחת';
+  const add1=()=>{const v=ni.value.trim();if(!v)return;famSet(famList().concat([{name:v}]))};
+  nb.onclick=add1;ni.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();add1()}};
+  ni.oninput=()=>{S.famEdit=true};ni.onblur=()=>{S.famEdit=!!ni.value.trim()};
+  bar.append(ni,nb,bulk);wrap.appendChild(bar);
+  const bp=document.createElement('div');bp.style.cssText='display:none;margin:0 0 8px';
+  const ta=document.createElement('textarea');ta.id='famTa';ta.rows=6;ta.placeholder='שורה לכל משפחה';ta.style.cssText='width:100%;padding:8px 10px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;box-sizing:border-box;margin-bottom:6px';
+  const tb=document.createElement('button');tb.type='button';tb.style.cssText=smallBtn;tb.textContent='הוסף את כולן';
+  tb.onclick=()=>{const names=ta.value.split('\n').map(s=>s.trim()).filter(Boolean);if(names.length)famSet(famList().concat(names.map(n=>({name:n}))))};
+  ta.oninput=()=>{S.famEdit=true};ta.onblur=()=>{S.famEdit=!!ta.value.trim()};
+  bp.append(ta,tb);bulk.onclick=()=>{bp.style.display=bp.style.display==='none'?'block':'none';if(bp.style.display==='block')ta.focus()};
+  wrap.appendChild(bp);
+  if(!fams.length){const e=document.createElement('div');e.textContent='עוד אין משפחות. הוסיפו משפחה או הדביקו רשימה.';e.style.cssText='color:#64748b;padding:18px 4px';wrap.appendChild(e);host.appendChild(wrap);return}
+  const tl=document.createElement('div');tl.style.cssText='position:relative;padding:4px 0';
+  if(fams.length>1){const ln=document.createElement('div');ln.style.cssText='position:absolute;right:19px;top:24px;bottom:24px;width:2px;background:#e2e8f0';tl.appendChild(ln)}
+  fams.forEach((f,i)=>{
+    const chosen=!!f.plot,isCur=i===cur;
+    const row=document.createElement('div');
+    const base=isCur?'#eef2ff':'transparent';
+    row.style.cssText='position:relative;display:flex;align-items:center;gap:10px;padding:5px 4px;border-radius:12px;background:'+base;
+    row.onmouseenter=()=>{if(!isCur)row.style.background='#f8fafc'};row.onmouseleave=()=>{row.style.background=base};
+    const node=document.createElement('span');
+    node.style.cssText='flex:none;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;box-sizing:border-box;position:relative;z-index:1;'+(chosen?'background:#16a34a;color:#fff':isCur?'background:#4f46e5;color:#fff':'background:#fff;border:2px solid #cbd5e1;color:#64748b');
+    node.textContent=chosen?'✓':String(i+1);
+    const ni2=document.createElement('input');ni2.type='text';ni2.value=f.name;ni2.maxLength=40;
+    ni2.style.cssText='flex:1;min-width:100px;border:1px solid transparent;background:transparent;font:inherit;font-size:15px;font-weight:600;padding:5px 8px;border-radius:8px';
+    ni2.onfocus=()=>{S.famEdit=true;ni2.style.borderColor='#cbd5e1';ni2.style.background='#fff'};
+    ni2.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();ni2.blur()}if(e.key==='Escape'){ni2.value=f.name;ni2.blur()}};
+    ni2.onblur=()=>{S.famEdit=false;ni2.style.borderColor='transparent';ni2.style.background='transparent';const v=ni2.value.trim();if(v&&v!==f.name){const list=famList();list[i].name=v;famSet(list)}};
+    const st=document.createElement('span');st.style.cssText='font-size:12px;white-space:nowrap;color:'+(chosen?'#15803d':'#4338ca');
+    st.textContent=chosen?'מגרש '+f.plot+(f.t?' · '+fmtT(f.t):''):(isCur?'התור עכשיו':'');
+    const cp=document.createElement('button');cp.type='button';cp.style.cssText=icoBtn;cp.textContent='🔗';cp.title='העתק קישור';cp.onclick=()=>copyTxt(location.origin+location.pathname+'?f='+f.code,'הקישור של '+f.name+' הועתק');
+    const rm=document.createElement('button');rm.type='button';rm.style.cssText=icoBtn;rm.textContent=chosen?'↩':'✕';rm.title=chosen?'בטל בחירה':'מחק';let armed=false;
+    rm.onclick=async()=>{
+      if(!armed){armed=true;rm.textContent='בטוח?';rm.style.cssText=icoBtn+';font-size:12px;color:#b91c1c;font-weight:700';setTimeout(()=>{armed=false;rm.textContent=chosen?'↩':'✕';rm.style.cssText=icoBtn},3000);return}
+      if(chosen){try{const r=await (await fetch(API+'?action=b_reset&admin='+encodeURIComponent(ADM)+'&code='+encodeURIComponent(f.code))).json();if(r.ok){S.bt=r;toast('הבחירה של '+f.name+' בוטלה')}}catch(e){toast('הפעולה נכשלה')}render()}
+      else{const list=famList();list.splice(i,1);famSet(list)}
+    };
+    const hd=document.createElement('span');hd.textContent=chosen?'🔒':'⋮⋮';hd.title=chosen?'משפחה שכבר בחרה – לא ניתן להזיז':'גרור לשינוי סדר';
+    hd.style.cssText='flex:none;width:18px;text-align:center;color:#94a3b8;font-size:'+(chosen?'12px':'16px')+';'+(chosen?'':'cursor:grab;letter-spacing:-2px');
+    row.append(node,ni2,st,cp,rm,hd);
+    if(!chosen){
+      row.draggable=true;
+      row.ondragstart=e=>{if(e.target!==row){e.preventDefault();return}S.dragging=true;S.dragCode=f.code;e.dataTransfer.effectAllowed='move';try{e.dataTransfer.setData('text/plain',f.code)}catch(_){}row.style.opacity='.4'};
+      row.ondragend=()=>{S.dragging=false;S.dragCode=null;render()};
+      row.ondragover=e=>{if(!S.dragCode||S.dragCode===f.code)return;e.preventDefault();const r=row.getBoundingClientRect();row.style.boxShadow=e.clientY<r.top+r.height/2?'0 -3px 0 #4f46e5':'0 3px 0 #4f46e5'};
+      row.ondragleave=()=>{row.style.boxShadow=''};
+      row.ondrop=e=>{e.preventDefault();row.style.boxShadow='';const r=row.getBoundingClientRect();const before=e.clientY<r.top+r.height/2;const dc=S.dragCode;S.dragging=false;S.dragCode=null;if(dc)moveFam(dc,f.code,before)};
+    }
+    tl.appendChild(row);
+  });
+  wrap.appendChild(tl);host.appendChild(wrap);
+}
+function loadStats(){fetch(API+'?action=stats&admin='+encodeURIComponent(ADM)).then(r=>r.json()).then(r=>{if(r&&r.ok){S.stats=r;renderNotice()}}).catch(()=>{})}
+async function refresh(){
+  try{const r=JSON.parse(await run('getAll'));S.remote=r;S.loaded=true;S.err=null;render();if(S.admin)loadStats();loadBeta()}
+  catch(e){if(!S.loaded){S.err='לא ניתן לטעון שיבוצים כרגע. אפשר לרענן את העמוד.';render()}}
+}
+document.querySelectorAll('#viewseg button').forEach(x=>x.classList.toggle('on',x.dataset.v===S.view));
+render();refresh();
+if(ADM)fetch(API+'?action=whoami&admin='+encodeURIComponent(ADM)).then(r=>r.json()).then(r=>{S.admin=!!r.admin;if(!S.admin)ADM='';document.querySelectorAll('#viewseg [data-v=recent],#viewseg [data-v=fam]').forEach(rb=>rb.style.display=S.admin?'':'none');render();refresh()}).catch(()=>{});
+setInterval(()=>{if(!document.hidden&&!S.sel&&!(S.view==='fam'&&S.famEdit))refresh()},8000);
+</script>
+</body>
+</html>
